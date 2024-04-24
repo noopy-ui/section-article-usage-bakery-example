@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bakery</title>
+    <style>
+        /* General styles for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8d5ba; /* Background color for the body */
+        }
+        /* Header styles */
+        header {
+            background-image: url('assets/imgs/bg-pattern.jpg'); /* Background image for the header */
+            background-size: cover;
+            color: #570505; /* Text color for the header */
+            padding: 20px;
+            text-align: center;
+        }
+        /* Fade-in animation for the header logo */
+        header img {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Navigation styles */
+        nav {
+            background-color: #9e2727; /* Background color for the navigation bar */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff; /* Text color for navigation links */
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #fbbfbf; /* Background color for hovered navigation links */
+        }
+        /* Section styles */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff; /* Background color for sections */
+            border-radius: 10px;
+            position: relative; /* Add position relative for positioning side notes */
+        }
+        /* Label and side note for sections */
+        section::before {
+            content: "Section"; /* Label text */
+            position: absolute;
+            top: -20px; /* Position above the section */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #9e2727; /* Background color for label */
+            color: #ffffff; /* Text color for label */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        /* Article styles */
+        article {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffe4b5; /* Background color for articles */
+            border-radius: 10px;
+            position: relative; /* Add position relative for positioning side notes */
+        }
+        /* Label and side note for articles */
+        article::before {
+            content: "Article"; /* Label text */
+            position: absolute;
+            top: -20px; /* Position above the article */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #570505; /* Background color for label */
+            color: #ffffff; /* Text color for label */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        /* Floating animation for article images */
+        article img {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+        /* Footer styles */
+        footer {
+            background-image: url('assets/imgs/bg-pattern.jpg'); /* Background image for the footer */
+            background-size: cover;
+            color: #741111; /* Text color for the footer */
+            padding: 20px;
+            text-align: center;
+            position: fixed; /* Fixed position at the bottom of the page */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="assets/imgs/logo.png" alt="Delicious Bakery Logo" width="40px" height="45px">
+        <h1>Delicious Bakery</h1> <!-- Title of the bakery -->
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <!-- Section containing general content -->
+    <section>
+        <!-- Side note for section -->
+        <div style="position: absolute; top: -30px; left: -10px; background-color: #fff; padding: 5px; border-radius: 5px;">
+            This is a section that contains general content.
+        </div>
+        <h2>Welcome to Our Bakery</h2>
+        <p>At Delicious Bakery, we offer a wide range of freshly baked goods to satisfy your cravings.</p>
+        <p>Whether you're in the mood for pastries, cakes, or bread, we have something for everyone.</p>
+    </section>
+    <!-- Article featuring a specific recipe -->
+    <article>
+        <!-- Side note for article -->
+        <div style="position: absolute; top: -30px; left: -10px; background-color: #ffe4b5; padding: 5px; border-radius: 5px;">
+            This is an article that features a specific recipe.
+        </div>
+        <h2>Featured Recipe: Chocolate Croissants</h2>
+        <img src="assets/imgs/food.png" alt="Chocolate Croissant" width="100px" height="100px">
+        <p>Indulge in our mouthwatering chocolate croissants, made with flaky pastry and rich chocolate filling.</p>
+        <p>Perfect for breakfast or as a sweet treat any time of day!</p>
+        <footer>Posted on: April 24, 2024</footer> <!-- Footer for the article -->
+    </article>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Delicious Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
